@@ -1,7 +1,7 @@
 package example
 
-fun greeting() = println("Hello, World!!")
+fun greetings() = println("Hello, World!!")
 
 fun main() {
-    greeting()
+    greetings()
 }
