@@ -21,7 +21,22 @@ fun main() {
      * step에 들어온 값 만큼 증가시킨다
      */
     for (i in 0 .. 10 step 2) {
-        println(i)
+        // println(i)
     }
 
+    /**
+     * downTo를 사용해 반복하면서 값을 감소시킨다
+     */
+    for (i in 5 downTo 1) {
+        // println(i)
+    }
+
+    /**
+     * 전달받은 배열을 반복
+     */
+    val numbers = arrayOf(1, 2, 3)
+
+    for (i in numbers) {
+        println(i)
+    }
 }
