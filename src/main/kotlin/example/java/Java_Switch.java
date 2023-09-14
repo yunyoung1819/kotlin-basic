@@ -1,4 +1,4 @@
-package example;
+package example.java;
 
 public class Java_Switch {
 
