@@ -1,5 +1,7 @@
 package example.kotlin
 
+import example.java.Java_NullSafety
+
 fun getNullStr(): String? = null
 
 fun getLengthIfNotNull(str: String?) = str?.length ?: 0
@@ -12,4 +14,11 @@ fun main() {
 
     val length = getLengthIfNotNull(null)
     println(length)
+
+//    throw NullPointerException()
+
+//    val c: String? = null
+//    val d = c!!.length
+
+    println(Java_NullSafety.getNullStr()?.length ?: 0)
 }
