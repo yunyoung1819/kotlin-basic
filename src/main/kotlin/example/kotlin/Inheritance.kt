@@ -8,12 +8,13 @@ open class Dog {
     }
 }
 
-class Bulldog(override var age : Int = 0) : Dog() {
+open class Bulldog(override var age : Int = 0) : Dog() {
 
     override fun bark() {
-        println("컹컹!!")
+        super.bark()
     }
 }
+
 
 open class Cat {
     open var age: Int = 0
@@ -31,6 +32,20 @@ class WildCat(override var age : Int = 0) : Cat() {
     }
 }
 
+abstract class Developer {
+
+    abstract var age: Int
+    abstract fun code(language: String)
+
+}
+
+class BackendDeveloper(override var age: Int) : Developer() {
+
+    override fun code(language: String) {
+        println("I code with $language")
+    }
+}
+
 fun main() {
     val dog = Bulldog(age = 2)
     println(dog.age)
@@ -39,4 +54,8 @@ fun main() {
     val cat = WildCat(age = 1)
     println(cat.age)
     cat.bark()
+
+    val backendDeveloper = BackendDeveloper(age = 20)
+    println(backendDeveloper.age)
+    backendDeveloper.code("Kotlin")
 }
