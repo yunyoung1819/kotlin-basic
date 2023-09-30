@@ -82,8 +82,47 @@ fun main() {
         add(3)
     }
 
-    val iterator = currencyList.iterator()
-    while (iterator.hasNext()) {
-        println(iterator.next())
-    }
+//    val iterator = currencyList.iterator()
+//    while (iterator.hasNext()) {
+//        println(iterator.next())
+//    }
+
+//    println("=========")
+
+//    for (currency in currencyList) {
+//        println(currency)
+//    }
+
+//    println("=========")
+
+//    currencyList.forEach {
+//        println(it)
+//    }
+
+    /**
+     * for loop -> map
+     */
+    val lowerList = listOf("a","b","c")
+//    val upperList = mutableListOf<String>()
+
+//    for (lowerCase in lowerList) {
+//        upperList.add(lowerCase.uppercase())
+//    }
+
+    val upperList = lowerList.map { it.uppercase() }
+//    println(upperList)
+
+//    val filteredList = mutableListOf<String>()
+//    for (upperCase in upperList) {
+//        if (upperCase == "A" || upperCase == "C") {
+//            filteredList.add(upperCase)
+//        }
+//    }
+    val filteredList = upperList
+        .asSequence()
+        .filter { it == "A" || it == "C" }
+        .toList()
+
+    println(filteredList)
+
 }
